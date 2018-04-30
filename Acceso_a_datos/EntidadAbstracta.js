@@ -3,9 +3,13 @@ class EntidadAbstracta extends ClienteAbstracto {
   constructor() {
     super();
     this._url += 'marca/';
+
+  buscarRango(first, pagesize) {
+
+    return fetch(this._url + '?'+ 'first=' + first '&' + 'pagesize=' + pagesize);
   }
 
-  BuscarTodas() {
+  buscar() {
     return fetch(this._url);
   }
 

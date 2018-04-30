@@ -1,6 +1,6 @@
 class ClienteAbstracto {
   constructor() {
-    this._url = 'http://localhost:8080/MantenimientoMiddleWare-web-1.0-SNAPSHOT/webresources/';
+    this._url = 'http://localhost:8080/MantenimientoWebData-1.0-SNAPSHOT/webresources/';
   }
 
   get url() {

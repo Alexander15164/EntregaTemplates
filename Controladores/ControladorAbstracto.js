@@ -5,7 +5,7 @@ class ControladorAbstracto {
   }
 
   TodosLosDatos() {
-    return this.entidadAbs.BuscarTodas().then(
+    return fetch('http://localhost:8080/MantenimientoWebData-1.0-SNAPSHOT/webresources/marca').then(
       function (response) {
         if (response.ok) {
           return response.json();
@@ -18,6 +18,18 @@ class ControladorAbstracto {
 
   DatosPorNombre(nombre) {
     return this.entidadAbs.BuscarPorNombre(nombre).then(
+      function (response) {
+        if (response.ok) {
+          return response.json();
+        }else {
+          return undefined;
+        }
+      }
+    );
+  }
+
+  BuscarPorRango(first, pagesize) {
+    return this.entidadAbs.buscarRango(first, pagesize).then(
       function (response) {
         if (response.ok) {
           return response.json();
