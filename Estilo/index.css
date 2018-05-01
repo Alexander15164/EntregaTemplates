@@ -1,4 +1,4 @@
-tabla-marca table {
+tabla-datos table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -9,5 +9,11 @@ th {
 }
 
 body{
-  position: center;
+  align-content: center;
+  background-color: rgb(221, 222, 222);
 }
+h1{
+  position: relative;
+  left: 25%;
+}
+tab
