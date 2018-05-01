@@ -7,3 +7,7 @@ tabla-marca table {
 th {
     height: 50px;
 }
+
+body{
+  position: center;
+}
