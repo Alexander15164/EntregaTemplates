@@ -110,9 +110,38 @@ class TablaDatosWC extends HTMLElement{
     opcion23.setAttribute('value', 'equipoDetalle');
     opcion23.innerText = 'Equipo Detalle';
     select.appendChild(opcion23);
-
-
     divEleccion.setAttribute('id', 'seleccion');
+
+    var divPaginador = document.createElement('div');
+    var selected = document.createElement('select');
+    var option0 = document.createElement('option');
+    var option1 = document.createElement('option');
+    var option2 = document.createElement('option');
+    var option3 = document.createElement('option');
+    var option4 = document.createElement('option');
+    var option5 = document.createElement('option');
+    option0.setAttribute('value', 'seleccion');
+    option0.innerText = 'Seleccione registros por pagina';
+    selected.appendChild(option0);
+    option1.setAttribute('value', '1');
+    option1.innerText = '1';
+    selected.appendChild(option1);
+    option2.setAttribute('value', '2');
+    option2.innerText = '2';
+    selected.appendChild(option2);
+    option3.setAttribute('value', '3');
+    option3.innerText = '3';
+    selected.appendChild(option3);
+    option4.setAttribute('value', '4');
+    option4.innerText = '4';
+    selected.appendChild(option4);
+    option5.setAttribute('value', '5');
+    option5.innerText = '5';
+    selected.appendChild(option5);
+    divPaginador.setAttribute('id', 'pagina');
+    divPaginador.appendChild(selected);
+
+
     div.setAttribute('id', 'paginador');
     tabla.setAttribute('id', 'tablaEntidad');
     tabla.setAttribute('border', 1);
@@ -293,8 +322,10 @@ class TablaDatosWC extends HTMLElement{
 
     };
 
+
     this.root.appendChild(divEleccion);
     this.root.appendChild(cabecerasDisponibles);
+    this.root.appendChild(divPaginador);
     this.root.appendChild(tabla);
     this.root.appendChild(div);
   }
