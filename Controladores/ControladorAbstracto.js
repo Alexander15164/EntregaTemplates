@@ -10,35 +10,11 @@ class ControladorAbstracto {
         if (response.ok) {
           return response.json();
         }else {
-          return undefined;
+          return null;
         }
       }
     );
   }
-
-  DatosPorNombre(nombre) {
-    return this.entidadAbs.BuscarPorNombre(nombre).then(
-      function (response) {
-        if (response.ok) {
-          return response.json();
-        }else {
-          return undefined;
-        }
-      }
-    );
-  }
-
-  DatosPorID(id) {
-    return this.entidadAbs.BuscarPorId(id).then(
-    function (response) {
-      if (response.ok) {
-        return response.json();
-      }else {
-        return undefined;
-      }
-    }
-    );
-  }
-
 }
+
 export  default ControladorAbstracto;

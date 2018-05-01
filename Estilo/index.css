@@ -1,10 +1,4 @@
-tabla-datos table {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  position: relative;
-  left: 50%;
-}
+
 
 th {
     height: 50px;
