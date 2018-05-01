@@ -17,7 +17,6 @@ class NombreEntidadWC extends HTMLElement {
     let titulo = document.createElement('h1');
     let leyenda = this.getAttribute('leyenda');
     let entidad = 'Marca';
-    console.log(leyenda);
     this.setAttribute('leyenda', leyenda);
     titulo.innerText = leyenda;
     this.root.appendChild(titulo);

@@ -2,15 +2,17 @@ import  ClienteAbstracto from './ClienteAbstracto.js';
 class EntidadAbstracta extends ClienteAbstracto {
   constructor() {
     super();
-    this._url += 'marca/';
 
-  buscarRango(first, pagesize) {
-
-    return fetch(this._url + '?'+ 'first=' + first '&' + 'pagesize=' + pagesize);
+    //this._url += 'marca';
   }
 
-  buscar() {
-    return fetch(this._url);
+  cambiarUrl(entidad) {
+    this._url += entidad;
+  }
+
+  Buscar(entidad) {
+    console.log('entidad abstractaaa ' + entidad);
+    return fetch(this._url + entidad);
   }
 
   BuscarPorNombre(nombre) {
@@ -21,4 +23,4 @@ class EntidadAbstracta extends ClienteAbstracto {
     return fetch(this._url + id);
   }
 }
-export default ClienteAbstracto;
+export default EntidadAbstracta;
