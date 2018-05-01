@@ -13,6 +13,7 @@ class TablaDatosWC extends HTMLElement{
     cabecerasDisponibles.style.width = '90%';
     var divEleccion = document.createElement('div');
     var select = document.createElement('select');
+    select.setAttribute('class', 'caja');
     var opcion0 = document.createElement('option');
     var opcion1 = document.createElement('option');
     var opcion2 = document.createElement('option');
@@ -110,14 +111,13 @@ class TablaDatosWC extends HTMLElement{
     opcion23.setAttribute('value', 'equipoDetalle');
     opcion23.innerText = 'Equipo Detalle';
     select.appendChild(opcion23);
-
-
     divEleccion.setAttribute('id', 'seleccion');
     div.setAttribute('id', 'paginador');
     tabla.setAttribute('id', 'tablaEntidad');
     tabla.setAttribute('border', 1);
     tabla.style.color = 'black';
     tabla.style.fontFamily = 'fantasy, Helvetica, sans-serif';
+    tabla.style.width = '90%';
     select.onchange = function () {
       var selectedOption = this.options[select.selectedIndex];
       cabecerasDisponibles.style.background = '#D5E1F3';
